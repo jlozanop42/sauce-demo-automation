@@ -4,7 +4,7 @@ import abstractComponents.AbstractComponent;
 import login.locators.LoginFormLocators;
 import org.openqa.selenium.WebDriver;
 
-class LoginForm extends AbstractComponent {
+public class LoginForm extends AbstractComponent {
     public LoginForm(WebDriver driver) {
         super(driver);
         //isDisplayed();

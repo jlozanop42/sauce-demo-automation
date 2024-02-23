@@ -3,7 +3,7 @@ package login;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
-    public LoginForm loginForm;
+    private final LoginForm loginForm;
 
     public LoginPage(WebDriver driver) {
         loginForm = new LoginForm(driver);

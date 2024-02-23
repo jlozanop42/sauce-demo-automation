@@ -9,6 +9,7 @@ public abstract class AbstractComponent {
 
     public AbstractComponent(WebDriver driver) {
         commonMethods = new CommonMethods(driver);
+        this.driver = driver;
     }
 
     public abstract boolean isDisplayed();
