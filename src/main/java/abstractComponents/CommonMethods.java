@@ -21,7 +21,27 @@ public class CommonMethods {
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
+    public void waitForElementToBeVisible(By... byList) {
+        for(By byElement: byList) {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(byElement));
+        }
+    }
+
     public void waitForElementToBeVisible(WebElement element) {
         wait.until((driver) -> element.isDisplayed());
+    }
+
+    public boolean isElementDisplayed(WebElement element) {
+        return element.isDisplayed();
+    }
+
+    public boolean isElementDisplayed(WebElement... elements) {
+        boolean areElementsDisplayed = true;
+
+        for(WebElement element: elements) {
+            areElementsDisplayed = isElementDisplayed(element);
+        }
+
+        return areElementsDisplayed;
     }
 }
